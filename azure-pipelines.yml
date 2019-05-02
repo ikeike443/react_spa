@@ -12,7 +12,7 @@ variables:
   azureSubscription: '5586e403-2dad-414e-81dc-fc0bfbc3372e'
 
   # Web app name
-  webAppName: 'react_spa'
+  webAppName: 'react-spa'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -61,7 +61,7 @@ stages:
               buildType: current
             
           - task: AzureRmWebAppDeployment@4
-            displayName: 'Azure App Service Deploy: react_spa'
+            displayName: 'Azure App Service Deploy: react-spa'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
