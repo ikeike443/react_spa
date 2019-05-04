@@ -15,7 +15,7 @@ variables:
   webAppName: 'react-spa'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
 
 stages:
 - stage: Build
@@ -27,16 +27,15 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
-    - task: ArchiveFiles@2
-      displayName: 'Archive files'
+    - task: Docker@2
+      displayName: Login to ACR
       inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-        includeRootFolder: false
-        archiveType: zip
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-        replaceExistingArchive: true
-
-    - task: PublishPipelineArtifact@0
-      displayName: 'Publish pipeline artifacts'
+      command: login
+      containerRegistry: dockerRegistryServiceConnection1
+    - task: Docker@2
+      displayName: Build and Push
       inputs:
-        targetPath: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      command: buildAndPush
+      repository: Kaisha/react_spa
+      tags: |
+        tag1
