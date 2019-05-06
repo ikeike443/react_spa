@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "jest-junit": "^6.4.0",
     "react-scripts": "1.1.4"
   },
   "dependencies": {
@@ -15,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --reporters=jest-junit",
     "eject": "react-scripts eject"
   }
 }
