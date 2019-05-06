@@ -4,7 +4,7 @@ class Stuff extends Component {
   render() {
     return (
       <div>
-        <h2>STUFF</h2>
+        <h2>テストです</h2>
         <p>テスト</p>
         <ol>
           <li>Nulla pulvinar diam</li>
