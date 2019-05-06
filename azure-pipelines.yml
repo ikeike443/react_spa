@@ -37,6 +37,6 @@ stages:
       displayName: Build and Push
       inputs:
         command: buildAndPush
-        repository: Kaisha/react_spa
+        repository: react_spa
         tags:
           tag1
