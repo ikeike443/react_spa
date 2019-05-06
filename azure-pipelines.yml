@@ -2,6 +2,7 @@
 # Build a Node.js React app and deploy it as a Linux web app.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+#
 
 trigger:
 - master
