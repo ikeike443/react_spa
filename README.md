@@ -3,5 +3,5 @@
 
 # React SPA
 
-シンプルなSPA
+シンプルなSPAです。
 
