@@ -17,17 +17,30 @@ variables:
 
   # Agent VM image name
   vmImageName: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
+  
+  # for Jest
+  CI: true
 
 stages:
 - stage: Build
-  displayName: Build stage
+  displayName: Docker Build stage
   jobs:  
   - job: Build
     displayName: Build
     pool:
       vmImage: $(vmImageName)
+    strategy:
+      matrix:
+        node_10_x:
+          node_version: 10.x
 
     steps:
+    - script: |
+        npm install
+      displayName: npm install
+    - script: |
+        npm test
+      displayName: npm test
     - task: Docker@2
       displayName: Login to ACR
       inputs:
