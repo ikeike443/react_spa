@@ -31,7 +31,7 @@ stages:
       displayName: Login to ACR
       inputs:
         command: login
-        containerRegistry: dockerRegistryServiceConnection1
+        containerRegistry: ikeike443acr.azurecr.io
     - task: Docker@2
       displayName: Build and Push
       inputs:
