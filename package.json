@@ -1,5 +1,5 @@
 {
-  "name": "react_spa",
+  "name": "@ikeike443/react_spa",
   "version": "0.1.0",
   "devDependencies": {
     "jest-junit": "^6.4.0",
