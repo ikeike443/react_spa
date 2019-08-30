@@ -28,7 +28,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-          scope: '@ikeike443/react_spa'
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
@@ -45,4 +44,4 @@ jobs:
           scope: '@ikeike443'
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN2}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
