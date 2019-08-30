@@ -17,14 +17,14 @@ variables:
 
   # Agent VM image name
   vmImageName: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
-  
+
   # for Jest
   CI: true
 
 stages:
 - stage: Build
   displayName: Docker Build stage
-  jobs:  
+  jobs:
   - job: Build
     displayName: Build
     pool:
