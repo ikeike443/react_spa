@@ -10,7 +10,7 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '5586e403-2dad-414e-81dc-fc0bfbc3372e'
+  azureSubscription: '282bf220-8943-485c-abaf-187252d34b78'
 
   # Web app name
   webAppName: 'react-spa'

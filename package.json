@@ -1,7 +1,6 @@
 {
-  "name": "react_spa",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@ikeike443/react_spa",
+  "version": "0.1.1",
   "devDependencies": {
     "jest-junit": "^6.4.0",
     "react-scripts": "1.1.4"
@@ -16,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --reporters=jest-junit",
+    "test": "CI=true react-scripts test --env=jsdom --reporters=jest-junit",
     "eject": "react-scripts eject"
   }
 }
