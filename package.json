@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "jest-junit": "^6.4.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "5.0.1"
   },
   "dependencies": {
     "npm": "^6.9.0",
